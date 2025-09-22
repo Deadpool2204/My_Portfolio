@@ -1,92 +1,284 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+:root {
+  --bg: #0a0b0f;
+  --bg-alt: #0f1117;
+  --card: #11131a;
+  --text: #e6e9ef;
+  --muted: #a5adcb;
+  --brand: #7c4dff;
+  --brand-2: #00c2ff;
+  --accent: #21d19f;
+  --gradient: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 50%, #ff7ac6 100%);
+}
+
+
+html,
+body {
+  height: 100%;
+
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f2f2f2;
-  color: #333;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: var(--text);
+  background: radial-gradient(90rem 90rem at 10% -10%, #241f3a 0%, rgba(36, 31, 58, 0) 35%),
+    radial-gradient(90rem 90rem at 110% 10%, #142233 0%, rgba(20, 34, 51, 0) 35%),
+    var(--bg);
+  overflow-x: hidden;
+  background: url(Images/Baground/bgimage.jpg) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  color: white !important;
 }
 
-header {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+.glass {
+  backdrop-filter: saturate(140%) blur(10px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08)
 }
 
-header h1 {
-  margin-bottom: 0.5rem;
+.btn-brand {
+  background: var(--brand);
+  border: 0;
+  background: var(--accent, #7c4dff);
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0.5rem 0;
+.btn-brand:hover {
+  filter: brightness(1.05);
+  background: #5a2fcf;
+  /* darker shade */
+  color: #fff;
 }
 
-nav ul li {
-  margin: 0 15px;
+
+/* Outline button (black outline to match text) */
+.btn-outline-light {
+  border: 2px solid #000 !important;
+  color: #eeebeb !important;
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
+.btn-outline-light:hover {
+  background: #000 !important;
+  color: #fff !important;
 }
 
-section {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
+
+.text-gradient {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent
 }
 
-section h2 {
-  margin-bottom: 1rem;
-  color: #222;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.5rem;
+.border-gradient {
+  border-image: var(--gradient) 1;
 }
 
-.project {
-  background: white;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-left: 4px solid #444;
+/* NAVBAR */
+
+.navbar {
+  --bs-navbar-padding-y: .7rem;
 }
 
-.project a {
-  color: #0066cc;
-  text-decoration: none;
+/* Force nav links to white */
+.nav-link {
+  color: #fff !important;
+  transition: color 0.3s ease;
 }
 
-footer {
-  text-align: center;
-  background: #222;
-  color: white;
-  padding: 1rem;
-  margin-top: 2rem;
+/* Active & hover can stay white (or gold if you want highlight) */
+.nav-link.active,
+.nav-link:hover {
+  color: #FFD700 !important;
+  /* Gold accent on hover */
 }
 
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 20px;
+/* HERO */
+.hero {
+  padding: 6rem 0 4rem;
+  overflow: hidden;
+
+  /* Use cover instead of contain to fill entire section */
+  background: url("Assets/images/baground/header3.jpg") no-repeat center center;
+  background-size: cover;
+  /* <-- change this from contain */
+  position: relative;
 }
 
-.image-gallery img {
-  width: 100%;
-  max-width: 280px;
+/* Add dark overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  /* semi-transparent overlay */
+  z-index: 1;
+}
+
+/* Keep your blur gradients, but make sure they sit above overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -40% -20%;
+  height: 50vh;
+  z-index: 2;
+  filter: blur(80px);
+  opacity: 0.25;
+  background:
+    radial-gradient(40rem 40rem at 70% 10%, #7c4dff33 0%, transparent 50%),
+    radial-gradient(40rem 40rem at 10% 70%, #00c2ff33 0%, transparent 50%);
+}
+
+.hero-card {
+  position: relative;
+  z-index: 3;
+  /* Make sure cards sit above overlays */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Progress Bars */
+#home .progress {
+  height: 12px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  /* subtle track */
 }
 
-.image-gallery img:hover {
-  transform: scale(1.05);
+#home .progress-bar {
+  background: linear-gradient(90deg, #7c4dff, #00c2ff);
+  width: 0;
+  /* stays hidden until triggered */
+  transition: width 1.5s ease-in-out;
+  border-radius: 5px;
+}
+
+/* When section is visible, animate progress */
+#home.visible .progress-bar.html {
+  width: 95%;
+}
+
+#home.visible .progress-bar.js {
+  width: 90%;
+}
+
+#home.visible .progress-bar.react {
+  width: 85%;
+}
+
+#home.visible .progress-bar.node {
+  width: 80%;
+}
+
+#home.visible .progress-bar.python {
+  width: 75%;
+}
+
+
+/* Force hero text to black */
+.hero,
+.hero .hero-card,
+.hero .hero-card p,
+.hero .hero-card h1,
+.hero .hero-card h2,
+.hero .hero-card h3,
+.hero .hero-card .nav-link,
+.hero .hero-card .small-muted {
+  color: #f9fdd0da !important;
+}
+
+/* Adjust secondary text too */
+.hero .text-secondary {
+  color: #bff1f5d3 !important;
+  /* slightly softer black */
+}
+
+
+
+/* SECTION UTILS */
+section {
+  padding: 4.5rem 0
+}
+
+.section-title {
+  letter-spacing: .4px
+}
+
+.section-sub {
+  color: var(--muted)
+}
+
+/* CARDS */
+.card {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.06)
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  transition: .25s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .25)
+}
+
+/* TIMELINE */
+.timeline {
+  border-left: 2px dashed rgba(255, 255, 255, .18);
+  margin-left: .75rem;
+  padding-left: 1rem
+}
+
+.timeline .dot {
+  width: .85rem;
+  height: .85rem;
+  border-radius: 50%;
+  background: var(--brand);
+  box-shadow: 0 0 0 .25rem rgba(124, 77, 255, .25)
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  border-top: 1px solid rgba(255, 255, 255, 0.08)
+}
+
+/* UTIL */
+.small-muted {
+  font-size: .925rem;
+  color: var(--muted)
+}
+
+.shadow-soft {
+  box-shadow: 0 20px 80px rgba(0, 0, 0, .45)
+}
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease, visibility .2s ease, transform .15s ease;
+  z-index: 1050;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
 }
