@@ -1,90 +1,605 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arin Sadanand Irache | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arin | Portfolio</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="home.css" />
 </head>
-<body>
-  <header>
-    <h1>Arin Sadanand Irache</h1>
-    <p>Aspiring AI Developer | MERN Stack Enthusiast</p>
-    <nav>
-  <ul>
-    <li><a href="#about">About</a></li>    
-    <li><a href="projects.html">Projects</a></li> <!-- updated -->    
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
 
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top glass">
+    <div class="container px-3">
+      <!-- Brand -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="fw-bold text-white">AI</span>
+      </a>
+
+      <!-- White collapse toggle button -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="bi bi-list fs-1 text-white"></i>
+      </button>
+
+      <!-- Collapsing Navbar Menu -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <!-- ms-auto pushes items to the right -->
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link active text-white" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Left Content -->
+        <div class="col-lg-6">
+          <div class="p-4 p-lg-5 rounded-4 hero-card shadow-lg text-white">
+            <p class="mb-2">Hello, I'm</p>
+            <h1 class="display-5 fw-extrabold mb-3">
+              Arin Irache
+            </h1>
+            <span class="text-gradient" id="typed">
+              Full-Stack Developer</span>
+            <p class="lead">
+              I craft fast, accessible, and beautiful web apps with a focus on
+              clean design and smooth UX. Love JavaScript, React,Python, and Bootstrap magic.
+            </p>
+            <p>My Main moto is : सदा सहाय्ये सज्जः</p>
+            <div class="d-flex gap-2 mt-4">
+              <a class="btn btn-sm btn-brand px-3 text-white p-3" href="#contact">
+                <i class="bi bi-rocket-takeoff me-1"></i>
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="col-lg-6">
+          <div class="p-4 p-lg-5 rounded-4 hero-card shadow-lg text-white" id="progress">
+
+            <!-- Profile Photo -->
+            <div class="text-center mb-4">
+              <img src="Images/Baground/profile.jpg" alt="Arin Profile" class="rounded-circle shadow-lg" width="140"
+                height="140">
+            </div>
+
+            <!-- Skills Progress Bars -->
+            <div class="mt-3">
+              <h5 class="fw-bold mb-3">Language Knowledge</h5>
+
+              <label class="fw-semibold d-flex justify-content-between">HTML / CSS<span>95%</span></label>
+              <div class="progress mb-3" style="height: 10px;">
+                <div class="progress-bar bg-success" data-width="95%"></div>
+              </div>
+
+              <label class="fw-semibold d-flex justify-content-between">JavaScript<span>70%</span></label>
+              <div class="progress mb-3" style="height: 10px;">
+                <div class="progress-bar bg-warning" data-width="70%"></div>
+              </div>
+
+              <label class="fw-semibold d-flex justify-content-between">React<span>85%</span></label>
+              <div class="progress mb-3" style="height: 10px;">
+                <div class="progress-bar bg-info" data-width="85%"></div>
+              </div>
+
+              <label class="fw-semibold d-flex justify-content-between">
+                Python <span>75%</span>
+              </label>
+              <div class="progress mb-3" style="height: 12px;">
+                <div class="progress-bar bg-dark" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </header>
 
+
+
+  <!-- ABOUT -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>I am a creative Computer Science student with a strong passion for Artificial Intelligence and building tech solutions using Python, MERN stack, and web development technologies. I'm always excited to learn and solve real-world problems using technology.</p>
+    <div class="container">
+
+      <h2 class="section-title fw-bold mb-3">About <span class="text-gradient">Me</span></h2>
+      <p class="lead text-white">Self‑taught developer who loves explaining tech in simple language,
+        building projects, and sharing what I learn along the way.</p>
+      <div class="timeline mt-4">
+        <div class="d-flex gap-3 align-items-start mb-4">
+          <div class="dot mt-1"></div>
+          <div>
+            <h6 class="mb-1">Full-Stack Developer • Freelancer</h6>
+            <p class="mb-0">
+              <span class="badge bg-primary">React</span>
+              <span class="badge bg-warning text-dark">MongoDB</span>
+              <span class="badge bg-secondary">Bootstrap 5</span>
+            </p>
+
+          </div>
+        </div>
+        <div class="d-flex gap-3 align-items-start mb-4">
+          <div class="dot mt-1"></div>
+          <div>
+            <h6 class="mb-1">Full Stack Python | ML Model Developer | AI Agent Developer</h6>
+            <p class="mb-0">
+              <span class="badge bg-primary">Python</span>
+              <span class="badge bg-secondary">Django</span>
+              <span class="badge bg-dark">Flask</span>
+              <span class="badge bg-info text-dark">FastAPI</span>
+              <span class="badge bg-warning text-dark">TensorFlow</span>
+              <span class="badge bg-danger">PyTorch</span>
+              <span class="badge bg-success">LangChain</span>
+              <span class="badge bg-primary">OpenAI API</span>
+              <span class="badge bg-dark">scikit-learn</span>
+              <span class="badge bg-info text-dark">Pandas</span>
+              <span class="badge bg-warning text-dark">NumPy</span>
+              <span class="badge bg-secondary">React</span>
+              <span class="badge bg-warning text-dark">MySQL</span>
+              <span class="badge bg-success">MongoDB</span>
+              <span class="badge bg-dark">GitHub</span>
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="d-flex gap-2 mt-4">
+        <a href="#projects" class="btn btn-brand"><i class="bi bi-layout-wtf me-1"></i> See Work</a>
+        <a href="#contact" class="btn btn-outline-light border-gradient"><i class="bi bi-telegram me-1"></i> Get
+          In Touch</a>
+      </div>
+
+    </div>
   </section>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Python, Java (basic)</li>
-      <li><strong>Web:</strong> HTML, CSS, JavaScript, React,.NET</li>
-      <li><strong>Backend:</strong> Node.js, Express.js</li>
-      <li><strong>Database:</strong> MongoDB, MySQL</li>
-      <li><strong>Tools:</strong> Git, VS Code, Android Studio</li>
-    </ul>
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="d-flex align-items-end justify-content-between mb-4">
+        <div>
+          <h2 class="section-title fw-bold mb-1">What I <span class="text-primary">Do</span></h2>
+          <p class="section-sub text-white">Building end-to-end Web and AI-powered solutions with real-world impact.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- AI/ML & Python -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
+            <div class="fs-1 text-warning mb-3"><i class="bi bi-cpu-fill"></i></div>
+            <h5 class="fw-semibold">AI & Machine Learning</h5>
+            <p class="text-white">
+              Built models for disease detection using scikit-learn & TensorFlow. Hands-on with real datasets, AI agents
+              & data pipelines.
+            </p>
+          </div>
+        </div>
+
+        <!-- MERN Stack Development -->
+        <div class=" col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
+            <div class="fs-1 text-success mb-3"><i class="bi bi-braces"></i></div>
+            <h5 class="fw-semibold">MERN Stack Development</h5>
+            <p class="text-white">
+              Developed full-stack apps using MongoDB, Express, React, and Node. Built authentication, dashboards &
+              clean APIs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Data Science Projects -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
+            <div class="fs-1 text-info mb-3"><i class="bi bi-graph-up-arrow"></i></div>
+            <h5 class="fw-semibold">Data Science & Analysis</h5>
+            <p class="text-white">
+              Created data-driven solutions for projects like plant disease and diabetes detection with clean
+              visualization & insights.
+            </p>
+          </div>
+        </div>
+
+        <!-- Technical Writing & Quick Learning -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
+            <div class="fs-1 text-danger mb-3"><i class="bi bi-lightbulb-fill"></i></div>
+            <h5 class="fw-semibold">Fast Learner & Problem Solver</h5>
+            <p class="text-white">
+              Quickly pick up new technologies and apply them in real projects. Strong team player and committed to
+              impactful solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Small AI Assistant</h3>
-      <p>A virtual assistant built using Python libraries like SpeechRecognition and pyttsx3.</p>
-      <a href="https://github.com/Deadpool2204/Small-AI-assistant" target="_blank">View Project</a>
-    </div>
-    <div class="project">
-      <h3>Plant Disease Detection</h3>
-      <p>ML model to detect plant diseases from images. Helps farmers identify infections early.</p>
-      <a href="https://github.com/Deadpool2204/plant-disease-detection-system" target="_blank">View Project</a>
-    </div>
-    <div class="project">
-      <h3>GlucoSense</h3>
-      <p>AI-powered diabetes detection and electricity price forecasting system using ML.</p>
-      <a href="https://github.com/Deadpool2204/Diabetes-detection-model-and-web-application" target="_blank">View Project</a>
+    <div class="container py-5">
+      <div class="d-flex align-items-end justify-content-between py-1">
+        <div>
+          <h2 class="section-title fw-bold ">Featured <span class="text-gradient">Projects</span></h2>
+          <p class="section-sub text-white">A taste of things I've shipped.</p>
+        </div>
+        <a class="btn btn-outline-light border-gradient" href="https://github.com/Deadpool2204">View
+          All</a>
+      </div>
+      <div class="row g-4">
+        <!-- Project Card -->
+        <!-- Glucosense – Diabetes Detection -->
+        <div class="col-md-6 col-lg-4">
+          <article class="card h-100 rounded-4 overflow-hidden">
+            <video class="card-img-top" autoplay loop muted>
+              <source src="Images/GLucosense/Demo_Gluicosense.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="card-body">
+              <h5 class="card-title">Glucosense – Diabetes Detection</h5>
+              <p class="card-text small-muted">
+                AI-powered diabetes detection using machine learning on medical datasets. Provides early-stage
+                predictions based on user input.
+              </p>
+              <div class="d-flex gap-2">
+                <span class="badge text-bg-dark">Python</span>
+                <span class="badge text-bg-dark">scikit-learn</span>
+                <span class="badge text-bg-dark">Pandas</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 d-flex gap-2 p-3 pt-0">
+              <a href="https://github.com/Deadpool2204/Glucosense"
+                class="btn btn-sm btn-outline-light border-gradient">Code</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Plant Disease Detection System -->
+        <div class="col-md-6 col-lg-4">
+          <article class="card h-100 rounded-4 overflow-hidden">
+            <img class="card-img-top" src="Images/Plant_deases/plat_desase_home_page.png"
+              alt="Plant Disease Detection" />
+            <div class="card-body">
+              <h5 class="card-title">Plant Disease Detection</h5>
+              <p class="card-text small-muted">
+                Image-based disease detection system trained on 85,000+ leaf images. Built for farmers to identify
+                diseases early and reduce crop loss.
+              </p>
+              <div class="d-flex gap-2">
+                <span class="badge text-bg-dark">Python</span>
+                <span class="badge text-bg-dark">TensorFlow</span>
+                <span class="badge text-bg-dark">CNN</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 d-flex gap-2 p-3 pt-0">
+              <a href="https://github.com/Deadpool2204/Plant-Disease-Detection"
+                class="btn btn-sm btn-outline-light border-gradient">Code</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- AI Dashboard Platform -->
+        <div class="col-md-6 col-lg-4">
+          <article class="card h-100 rounded-4 overflow-hidden">
+            <video class="card-img-top" autoplay loop muted>
+              <source src="Images/Ai-data-visualization Platform/mernproject.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="card-body">
+              <h5 class="card-title">AI Dashboard Platform</h5>
+              <p class="card-text small-muted">
+                Interactive admin dashboard with analytics, built using FastAPI, React, MongoDB, and Bootstrap. Features
+                include secure login, charts, and data management.
+              </p>
+              <div class="d-flex gap-2">
+                <span class="badge text-bg-dark">React</span>
+                <span class="badge text-bg-dark">FastAPI</span>
+                <span class="badge text-bg-dark">MongoDB</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 d-flex gap-2 p-3 pt-0">
+              <a href="https://github.com/Deadpool2204/AI-Dashboard-Platform"
+                class="btn btn-sm btn-outline-light border-gradient">Code</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <section id="internships">
-  <h2>Internships</h2>
 
-  <p>
-    <strong>Infosys Springboard (Feb–Apr 2025)</strong>: Built ML models like GlucoSense and explored AI concepts. <br>
-    <strong>Certificate Link:</strong>
-    <a href="https://drive.google.com/drive/u/0/folders/1CgeM1kQx2wLOKgfmnkgyp0yKJXumIl9" target="_blank">
-      View Certificate
-    </a>
-  </p>
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="container">
+      <div class="d-flex align-items-end justify-content-between mb-4">
+        <div>
+          <h2 class="section-title fw-bold mb-1">Certifications & <span class="text-primary">Courses</span></h2>
+          <p class="section-sub text-white">Validated skills and continuous learning.</p>
+        </div>
+      </div>
 
-  <p>
-    <strong>Edunet Foundation (Dec 2024–Jan 2025)</strong>: Created a plant disease detection model using 85,000 images. An initiative supported by Microsoft & SAP. <br>
-    <strong>Certificate Link:</strong>
-    <a href="https://drive.google.com/drive/u/0/folders/1EslMLv7lO8mq2XeMg76-_lfsrZtumMof" target="_blank">
-      View Certificate
-    </a>
-  </p>
-</section>
+      <div class="row g-4">
+        <!-- NPTEL Java DSA -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 rounded-4 p-4 shadow-sm border-0">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-award fs-1 text-success me-3"></i>
+              <h5 class="mb-0">DSA using Java</h5>
+            </div>
+            <p class="small-muted mb-2">Completed via NPTEL (IIT) with certification in core Java algorithms and data
+              structures.</p>
+            <a href="https://drive.google.com/drive/folders/1oDBypO9gVlRlGf25oCub45XPWwpVrpil" target="_blank"
+              class="btn btn-sm btn-outline-primary">View Certificate</a>
+          </div>
+        </div>
+
+        <!-- Infosys AI Certificate -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 rounded-4 p-4 shadow-sm border-0">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-cpu-fill fs-1 text-info me-3"></i>
+              <h5 class="mb-0">Artificial Intelligence</h5>
+            </div>
+            <p class="small-muted mb-2">Completed Infosys Springboard’s course focused on AI concepts and real-world
+              applications.</p>
+            <a href="https://drive.google.com/drive/folders/1uE6VGCfW9S6wkwEKGnNQQFy3kvxLqpUY" target="_blank"
+              class="btn btn-sm btn-outline-primary">View Certificate</a>
+          </div>
+        </div>
 
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:Irachearin@gmail.com">Irachearin@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arin-irache/" target="_blank">arin-irache</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Deadpool2204" target="_blank">Deadpool2204</a></p>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Arin Sadanand Irache. All rights reserved.</p>
+  <!-- INTERNSHIPS -->
+  <section id="internship" class="py-5">
+    <div class="container">
+      <div class="d-flex align-items-end justify-content-between mb-4">
+        <div>
+          <h2 class="section-title fw-bold mb-1">Internship <span class="text-gradient">Experience</span></h2>
+          <p class="section-sub text-white">Hands-on experience gained through real-world AI and ML projects.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- AICTE Edunet Foundation Internship -->
+        <div class="col-md-6 col-lg-5">
+          <div class="card h-100 rounded-4 p-4 shadow-sm border-0">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-flower1 fs-1 text-success me-3"></i>
+              <div>
+                <h5 class="mb-0">ML Model Development Intern</h5>
+                <small class="text-white">AICTE Edunet Foundation · Virtual</small>
+              </div>
+            </div>
+            <p class="small-muted mb-2">
+              Developed a <strong>Plant Disease Detection System</strong> using a dataset of 85,000+ leaf images.
+              Leveraged deep learning and image classification as part of the <strong>TechSaksham CSR</strong>
+              initiative
+              by Microsoft & SAP.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1cQUyNTCWnZSDzMEQ9PeowPvvJYc8nXvy" target="_blank"
+              class="btn btn-sm btn-outline-primary">View Certificate</a>
+          </div>
+        </div>
+
+        <!-- Infosys Springboard Internship -->
+        <div class="col-md-6 col-lg-5">
+          <div class="card h-100 rounded-4 p-4 shadow-sm border-0">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-cpu-fill fs-1 text-info me-3"></i>
+              <div>
+                <h5 class="mb-0">ML Intern – GlucoSense</h5>
+                <small class="text-white">Infosys Springboard · Virtual</small>
+              </div>
+            </div>
+            <p class="small-muted mb-2">
+              Created <strong>GlucoSense</strong>: an AI-powered diabetes detection system using machine learning models
+              to support early diagnosis. Completed under expert mentorship with exposure to real-world ML pipelines.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1qLS9x2ctGPQDv3HpezJTqd6uBy6cFA5L" target="_blank"
+              class="btn btn-sm btn-outline-primary">View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+
+        <div class="col-lg-3"></div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-6">
+          <div class="card h-100 rounded-4 p-4 shadow-sm">
+            <h3 class="mb-3">Let's build something great</h3>
+            <p class="text-white mb-4">Fill the form and I'll get back within 24 hours.</p>
+            <form class="row g-3" onsubmit="event.preventDefault(); handleSubmit();">
+              <div class="col-md-6">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Project Type</label>
+                <select class="form-select">
+                  <option>Website</option>
+                  <option>Web App</option>
+                  <option>UI/UX Design</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="4" required></textarea>
+              </div>
+              <div class="col-12 d-flex flex-wrap gap-2">
+                <button class="btn btn-brand" type="submit"><i class="bi bi-send me-1"></i>Send</button>
+                <button class="btn btn-outline-light border-gradient" type="reset">Reset</button>
+              </div>
+              <div id="formAlert" class="alert alert-success mt-2 d-none" role="alert">
+                Thanks! Your message has been sent.
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-3"></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 mt-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="d-flex align-items-center gap-2">
+        <strong>AI</strong>
+      </div>
+      <div class="small-muted">© <span id="year"></span> Arin. All rights reserved.</div>
+      <div class="d-flex gap-3 small-muted">
+        <a href="#" class="link-light text-decoration-none">Privacy</a>
+        <a href="#" class="link-light text-decoration-none">Terms</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="btn btn-dark rounded-circle back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Counter animation on scroll
+    const counters = document.querySelectorAll('[data-count]');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target; const target = +el.dataset.count; let n = 0; const step = Math.ceil(target / 60);
+          const tick = () => { n = Math.min(n + step, target); el.textContent = n; if (n < target) requestAnimationFrame(tick); };
+          requestAnimationFrame(tick); io.unobserve(el);
+        }
+      });
+    }, { threshold: .6 });
+    counters.forEach(c => io.observe(c));
+
+    // Smooth scroll + active links
+    document.querySelectorAll('a.nav-link').forEach(link => {
+      link.addEventListener('click', e => {
+        if (link.hash) {
+          e.preventDefault(); document.querySelector(link.hash).scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active')); link.classList.add('active');
+          const oc = bootstrap.Offcanvas.getInstance('#navOC'); if (oc) oc.hide();
+        }
+      });
+    });
+
+    // Contact form toast
+    function handleSubmit() {
+      const alertEl = document.getElementById('formAlert');
+      alertEl.classList.remove('d-none');
+      setTimeout(() => alertEl.classList.add('d-none'), 3000);
+    }
+    window.handleSubmit = handleSubmit;
+  </script>
+
+  <script>
+    // Back-to-top button
+    const backToTop = document.getElementById('backToTop');
+    function toggleBackToTop() { backToTop.classList.toggle('show', window.scrollY > 300); }
+    window.addEventListener('scroll', toggleBackToTop);
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const progressBars = document.querySelectorAll("#home .progress-bar");
+
+      function animateProgress() {
+        progressBars.forEach(bar => {
+          const rect = bar.getBoundingClientRect();
+          const inView = rect.top < window.innerHeight && rect.bottom >= 0;
+          if (inView && !bar.classList.contains("filled")) {
+            bar.style.width = bar.dataset.width;
+            bar.classList.add("filled");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", animateProgress);
+      animateProgress(); // run on load too
+    });
+  </script>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      themeToggle.textContent = document.body.classList.contains('light-mode') ? '🌙' : '☀️';
+    });
+  </script>
+
+  <script>
+    const typedText = [" Full-Stack Developer ", " Python ML Engineer ", " AI Agent Builder "];
+    let index = 0, charIndex = 0, currentText = "", isDeleting = false;
+    const typedEl = document.getElementById("typed");
+
+    function type() {
+      if (index >= typedText.length) index = 0;
+      currentText = typedText[index];
+      typedEl.textContent = isDeleting ? currentText.substring(0, charIndex--) : currentText.substring(0, charIndex++);
+      if (!isDeleting && charIndex === currentText.length) { isDeleting = true; setTimeout(type, 1000); return; }
+      if (isDeleting && charIndex === 0) { isDeleting = false; index++; setTimeout(type, 500); return; }
+      setTimeout(type, isDeleting ? 50 : 100);
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
+
+
+
 </body>
+
 </html>
